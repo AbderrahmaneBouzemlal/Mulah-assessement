@@ -1,110 +1,107 @@
 :root {
-	--Blue-color: #4465A6;
-	--primary-color: #FE7310;
-	--secondary-color: #E87B26;
-	--border-color: #F2CDB8;
-	--text-color: #646464;
-	--error-color: #ED4337;
-	--ok-color: #168C61;
+  --Blue-color: #4465a6;
+  --primary-color: #fe7310;
+  --secondary-color: #e87b26;
+  --border-color: #f2cdb8;
+  --text-color: #646464;
+  --error-color: #ed4337;
+  --ok-color: #168c61;
 }
 
-
 @font-face {
-    font-family: MinionPro-Regular;
-    font-weight: bolder;
-    src: url("./fonts/MinionPro-Regular.otf") format("opentype");
+  font-family: MinionPro-Regular;
+  font-weight: bolder;
+  src: url("./fonts/MinionPro-Regular.otf") format("opentype");
 }
 
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
 }
 
 body {
-	font-family: MinionPro-Regular;
-	font-weight: bold;
-	color: var(text-color);
-	padding-bottom: 80px;
+  font-family: MinionPro-Regular;
+  font-weight: bold;
+  color: var(text-color);
+  padding-bottom: 80px;
 }
 
 html {
-	height: 100%;
+  height: 100%;
 }
 
 article {
-	font-family: MinionPro-Regular;
-	font-weight: bold;
-	color: var(text-color);
-	padding: 10px;
-	height: 75%;
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	gap: 1.8rem;
+  font-family: MinionPro-Regular;
+  font-weight: bold;
+  color: var(text-color);
+  padding: 10px;
+  height: 75%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1.8rem;
 }
 
 .welcome {
-	width: 400px;
+  width: 400px;
 }
 
 .welcome h2 {
-	color: var(--text-color);
-	margin-top: 1.8rem;
-	font-size: 3.5rem;
-	letter-spacing: 3px;
-	font-weight: bold;
-	padding-left: 2rem;
+  color: var(--text-color);
+  margin-top: 1.8rem;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  padding-left: 2rem;
 }
 
 .welcome h3 {
-	margin-top: 1.8rem;
-	color: var(--secondary-color);
-	padding-left: 2rem;
-	font-weight: bolder;
+  margin-top: 1.8rem;
+  color: var(--secondary-color);
+  padding-left: 2rem;
+  font-weight: bolder;
 }
 
 .phone-input-wrapper {
-	align-self: center;
-	margin-top: 3rem;
-	display: flex;
-	align-items: center;
+  align-self: center;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
 }
 
 .country-code {
-	padding: 12px 40px 8px 5px;
-	border-bottom: 2px solid var(--secondary-color);
-	font-size: 18px;
-	color: var(--text-color);
+  padding: 12px 40px 8px 5px;
+  border-bottom: 2px solid var(--secondary-color);
+  font-size: 18px;
+  color: var(--text-color);
 }
 
-
-
 .phone-input-wrapper input[type="tel"] {
-	font-family: MinionPro-Regular;
-	color: var(--text-color);
-	width: 100%;
-	max-width: 300px;
-	font-size: 18px;
-	margin-left: 10px;
-	border: none;
-	border-bottom: 2px solid var(--secondary-color);
-  	padding: 12px 40px 8px 0px;
-	outline: none;
-	background-color: transparent;
-	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: MinionPro-Regular;
+  color: var(--text-color);
+  width: 100%;
+  max-width: 300px;
+  font-size: 18px;
+  margin-left: 10px;
+  border: none;
+  border-bottom: 2px solid var(--secondary-color);
+  padding: 12px 40px 8px 0px;
+  outline: none;
+  background-color: transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .phone-input-wrapper input[type="tel"]:focus {
-	box-shadow: none;
-	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .phone-input-wrapper input[type="tel"]:disabled {
@@ -115,32 +112,33 @@ article {
 
 /* Placeholder styling */
 input[type="tel"]::placeholder {
-	color: var(--text-color);
-	font-style: italic;
+  color: var(--text-color);
+  font-style: italic;
 }
 
 .phone-input-wrapper input[type="tel"]:invalid:not(:placeholder-shown) {
   border-color: var(--error-color);
 }
 
-.phone-input-wrapper input[type="tel"]:valid:not(:placeholder-shown) + .tick-icon {
+.phone-input-wrapper
+  input[type="tel"]:valid:not(:placeholder-shown)
+  + .tick-icon {
   opacity: 1;
   color: var(--ok-color);
 }
 
-
 .tick-icon {
-	position: relative;
-	right: 25px;
+  position: relative;
+  right: 25px;
 }
 
 .arrow {
-	right: 20px;
-	width: 20px;
-	height: 20px;
-	cursor: pointer;
-	position: relative;
-	transition: transform 0.3s ease;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
 .arrow.active {
@@ -160,31 +158,31 @@ input[type="tel"]::placeholder {
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(254, 115, 16, 0.3);
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(254, 115, 16, 0.3);
 }
 
 .btn:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 footer {
-	border-top: 1px solid grey;
-	min-height: 10%;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-	justify-content: center	;
-	align-items: center;
-	z-index: 100;
-	background-color: white;
+  border-top: 1px solid grey;
+  min-height: 10%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: white;
 }
 
 a {
-	color: var(--Blue-color);
+  color: var(--Blue-color);
 }
 
 /* Error popup */
@@ -235,4 +233,3 @@ a {
     padding-left: 1rem;
   }
 }
-
