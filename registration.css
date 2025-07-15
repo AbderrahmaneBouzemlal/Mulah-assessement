@@ -1,0 +1,351 @@
+@import url("./style.css");
+
+header {
+	height: 10%;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+	width: 400px;
+}
+
+.form-wrapper {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	gap: 1rem;
+}
+
+.form-wrapper div input {
+	font-family: MinionPro-Regular;
+	color: var(--text-color);
+	width: 100%;
+	max-width: 300px;
+	font-size: 1.2rem;
+	border-radius: 6px;
+	border-color: #D3D3D3;
+	padding: 5px;
+	appearance: none;
+}
+
+.form-wrapper div input:focus {
+	box-shadow: none;
+	outline: 0;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+	text-align: center;
+}
+input[type="number"]::placeholder {
+	color: var(--text-color);
+	text-align: center;
+}
+
+.registration {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 2rem;
+}
+
+.registration-outline {
+    width: 400px;
+    margin-bottom: 1rem;
+}
+
+.registration-outline h1 {
+    font-size: 2.5rem;
+    color: grey;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.registration-outline p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.form {
+	display: flex;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.form-wrapper > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-wrapper label {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.form-wrapper input[type="text"],
+.form-wrapper input[type="email"] {
+    padding: 12px 15px;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-family: MinionPro-Regular;
+}
+
+.form-wrapper input[type="text"]:focus,
+.form-wrapper input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(254, 115, 16, 0.1);
+    background-color: #fff;
+}
+
+.form-wrapper input[type="text"]:valid,
+.form-wrapper input[type="email"]:valid {
+    border-color: var(--ok-color);
+}
+
+.form-wrapper input[type="text"]:invalid:not(:placeholder-shown),
+.form-wrapper input[type="email"]:invalid:not(:placeholder-shown) {
+    border-color: var(--error-color);
+}
+
+.birthday {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.birthday input[type="number"] {
+    padding: 12px 10px;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-family: MinionPro-Regular;
+    text-align: center;
+}
+
+.birthday input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(254, 115, 16, 0.1);
+}
+
+#birthday-day,
+#birthday-month {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+#birthday-year {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.error {
+    display: none;
+    width: 100%;
+    height: 10px;
+    color: var(--error-color);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.form-wrapper > div:last-child {
+    position: relative;
+}
+
+.form-wrapper input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
+    color: var(--text-color);
+    cursor: pointer;
+    user-select: none;
+    margin-top: 0.8rem;
+}
+
+input:disabled:hover,
+input:disabled:active,
+input:disabled:focus {
+  cursor: not-allowed;
+}
+
+.form-wrapper input[type="checkbox"]:checked + span {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Checkbox functionality - hide email when checked */
+.form-wrapper input[type="checkbox"]:checked ~ input[type="email"] {
+    display: none;
+}
+
+
+
+input::placeholder {
+    color: #999;
+}
+
+input:focus {
+    outline: none;
+}
+
+.form-wrapper input:invalid:not(:placeholder-shown) {
+    animation: shake 0.5s ease-in-out;
+}
+
+.form-wrapper input:valid:not(:placeholder-shown) {
+    background-color: rgba(22, 140, 97, 0.05);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .registration {
+        padding: 10px;
+        min-height: 70vh;
+    }
+    
+    .registration-outline h1 {
+        font-size: 2rem;
+    }
+    
+    .registration-outline p {
+        font-size: 1rem;
+    }
+    
+    .form {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+    
+    .form-wrapper {
+        gap: 1.5rem;
+    }
+    
+    .birthday {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .birthday input[type="number"] {
+        width: 100%;
+    }
+    
+    #birthday-day,
+    #birthday-month,
+    #birthday-year {
+        width: 100%;
+    }
+    
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .form {
+        padding: 1rem;
+    }
+    
+    .registration-outline h1 {
+        font-size: 1.8rem;
+    }
+    
+    .form-wrapper input[type="text"],
+    .form-wrapper input[type="email"],
+    .birthday input[type="number"] {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+.form-wrapper > div {
+    position: relative;
+}
+
+.form-wrapper input:focus + label,
+.form-wrapper input:not(:placeholder-shown) + label {
+    transform: translateY(-1.5rem) scale(0.8);
+    color: var(--primary-color);
+}
+
+/* Loading state for form submission */
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Enhanced checkbox styling */
+.form-wrapper input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.form-wrapper input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-wrapper input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}

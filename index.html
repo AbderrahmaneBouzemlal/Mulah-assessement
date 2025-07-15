@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<title>Mulah</title>
+</head>
+<body>
+	<header>
+		<img src="./images/logo.png" width="200px" height="auto">
+	</header>
+	<h5></h5>
+	<article>
+		<div class="welcome">
+			<h2>Hello,<br>Welcome !</h2>
+			<h3>Check Your Loyalty Points & Rewards</h3>
+		</div>
+		<div class="error-popup" style="height: 40px; width: 100%;"></div>
+		<form class="form-container" id="loyaltyForm" action="registration.html">
+			<div class="phone-input-wrapper">
+				<span class="country-code">+60</span>
+				
+				<svg  class='arrow' fill="#77767b" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 96.154 96.154" xml:space="preserve" stroke="#77767b"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M0.561,20.971l45.951,57.605c0.76,0.951,2.367,0.951,3.127,0l45.956-57.609c0.547-0.689,0.709-1.716,0.414-2.61 c-0.061-0.187-0.129-0.33-0.186-0.437c-0.351-0.65-1.025-1.056-1.765-1.056H2.093c-0.736,0-1.414,0.405-1.762,1.056 c-0.059,0.109-0.127,0.253-0.184,0.426C-0.15,19.251,0.011,20.28,0.561,20.971z"></path> </g> </g></svg>
+				
+				<input id="phone" type="tel" name="phone" class="phone-number" placeholder="Enter you mobile number" pattern="[0-9]{10}" minlength="9" maxlength="10" required>
+				
+				<svg class='tick-icon' xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512"><path fill="#77767b" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
+				</svg>			
+			</div>
+			<button class="btn" type="submit">Check Loyalty Points</button>
+		</form>	
+	</article>
+	<footer>
+		<span>Powered by <a href="https://mulahrewards.com">MulahRewards.com</a></span>
+	</footer>
+	<script src="main.js"></script>
+</body>
+</html>

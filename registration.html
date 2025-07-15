@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mulah-Registration</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="registration.css">
+	<script defer src="./registration.js"></script>
+</head>
+<body>
+	<header>
+		<img src="./images/logo.png" width="200px" height="auto">
+	</header>
+	<div class="registration">
+		<div class="registration-outline">
+			<h1>Registration</h1>
+			<p>please fill up your details<p>
+		</div>
+		<div class="error-popup" style="height: 40px; width: 100%;"></div>
+		<form id="form" action="confirmation.html">
+			<div class="form-wrapper">
+				<div>
+					<label for="name">Name</label>
+					<input id="name" type="text" name="name" placeholder="Enter Name" required>
+					<span class="error" id="name-error"></span>
+				</div>
+				<div>
+					<label for="Birthday">Birthday</label>
+					<div class="birthday">
+						<input id="birthday-day" type="number" name="day" placeholder="DD" maxlength="2" required>
+						<input id="birthday-month" type="number" name="month" placeholder="MM" maxlength="2" required>
+						<input id="birthday-year" type="number" name="year" placeholder="YYYY" minlength="4" maxlength="4" required/>
+						<span class="error" id="birthday-error"></span>
+					</div>
+				</div>
+				<div class="email">
+					<label for="email">Email</label>
+					<input id="email" type="email" name="email" placeholder="Email Address" required>
+					<div class="checkbox">
+						<input id="checkbox" type="checkbox" name="email">
+						<span>no email address</span>
+					</div>
+					<span class="error" id="email-error"></span>
+				</div>
+			</div>
+			<button class="btn" type="submit">Continue</button>
+		</form>
+	</div>
+	<footer>
+		<span>Powered by <a href="https://mulahrewards.com">MulahRewards.com</a></span>	
+	</footer>
+</body>
+</html>
